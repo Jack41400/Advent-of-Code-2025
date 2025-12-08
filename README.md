@@ -20,7 +20,7 @@ Advent of Code is an Advent calendar of small programming puzzles written by Eri
 <!--te-->
 
 ## Prerequisites
-Any prerequisites needed for the project.
+No Prereq's
 
 ### System Requirements:
 * [git](https://git-scm.com/) >= 2.52.0
@@ -28,13 +28,26 @@ Any prerequisites needed for the project.
 ## Installation
 You can see all of the puzzels at [Advent of Code](https://adventofcode.com/).
 
+No installation should be needed. A copy of the repo can be saved or forked through GitHub.
+
 ### Usage
 
 ## Contributing
-Open / Closed Contributions. list of contributors. guidelines for contributions.
+--- Credits ---
+Puzzles, Code, & Design: [Eric Wastl](https://was.tl/)
+
+Beta Testing:
+
+Ben Lucek
+JP Burke
+Aneurysm9
+Andrew Skalski
+Community Managers: Danielle Lucek and Aneurysm9
 
 ## Author
-Written by Jack Phillips. 2025-12-07 :3
+Solutions written by Jack Phillips. 2025-12-07 :3
+
+Thanks again to Advent of Code for the puzzles!
 
 ## Licensing
 Any licensing disclosure.
