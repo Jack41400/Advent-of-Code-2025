@@ -1,5 +1,5 @@
 
-![Project Banner](.\assets\placeholder)
+![Personal Banner](.\assets\placeholder)
 
 # 2025 Coding Advent
              
