@@ -40,23 +40,10 @@ What do you get if you add up all of the invalid IDs?
 
 
 """
+# Names the file as a variable
 textFile = r"Day 2\validIDs.txt"
+# Temporary test data that is much shorter than real data
 testList = ['3299143-3378031','97290-131156','525485-660941','7606-10180']
-
-def IDCheck(n):
-    s = str(n)
-    k = len(s) // 2
-
-    for numberBlock in range(startInt, k+1):
-        if len(s) % numberBlock == 0:
-            blocks = [s[i:i+numberBlock] for i in range(0, len(s), numberBlock)]
-        if all(block == block[0] for block in blocks):
-            return True
-        return False
-
-def findNumbers(start, end):
-    results = [n for n in range(start, end +1) if IDCheck(n)]
-    print(results)
 
 with open(textFile,'r') as f:
     line = str(f.readline())
@@ -64,11 +51,5 @@ with open(textFile,'r') as f:
 IDList = line.split(',')
 
 for i in IDList:
-    startPoint, endPoint = i.split('-')
-    startInt = int(startPoint)
-    endInt = int(endPoint)
-    checkRange = int(endPoint) - int(startPoint)
-    findNumbers(startInt, endInt)
-
-
-# print(IDList)
+    startPoint, endPoint = i.split("-")
+    print(startPoint, endPoint)
