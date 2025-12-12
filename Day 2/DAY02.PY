@@ -39,17 +39,45 @@ Adding up all the invalid IDs in this example produces 1227775554.
 What do you get if you add up all of the invalid IDs?
 
 
+
+# Names the file as a variable
+textFile = r"Day 2\validIDs.txt"
+# Temporary test data that is much shorter than real data
+testList = ['525485-660941']
+#['3299143-3378031','97290-131156','525485-660941','7606-10180']
+
+# Pulls the raw data out into a string.
+with open(textFile,'r') as f:
+    line = str(f.readline())
+
+#Turns long string into a list seperating each number range into elements
+IDList = line.split(',')
+
+summation = 0
+#Breaks IDList into individula items.
+for i in IDList:
+    #Seperates starting number from end number
+    startString, endString = i.split("-")
+    print(startString)
 """
 # Names the file as a variable
 textFile = r"Day 2\validIDs.txt"
 # Temporary test data that is much shorter than real data
-testList = ['3299143-3378031','97290-131156','525485-660941','7606-10180']
+testList = ['525485-660941']
+#['3299143-3378031','97290-131156','525485-660941','7606-10180']
 
+# Pulls the raw data out into a string.
 with open(textFile,'r') as f:
     line = str(f.readline())
 
-IDList = line.split(',')
+ranges = [list(map(int, item.split('-'))) for item in line.split(',')]
+numbers = sum((list(range(a, b, + 1)) for a, b in ranges),[])
 
-for i in IDList:
-    startPoint, endPoint = i.split("-")
-    print(startPoint, endPoint)
+total = 0
+
+for num in numbers:
+    s = str(num)
+    if len(s) % 2 == 0 and s[:len(s) // 2:] * 2 == s:
+        total += num
+
+print(total)
